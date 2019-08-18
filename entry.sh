@@ -20,6 +20,6 @@ else
   cd 0dmx
 fi
 
-bundle update
+bundle update --no-color
 
-./bin/brigade "--secret=${SECRET}"
+bundle exec ruby bin/brigade "--secret=${SECRET}"
