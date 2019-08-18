@@ -12,5 +12,12 @@ if [ -z "${SECRET}" ]; then
   exit
 fi
 
-git clone "https://yegor256:${GITHUB_TOKEN}@github.com/yegor256/0dmx"
+if [ -d 0dmx ]; then
+  cd 0dmx
+  git pull
+  cd ..
+else
+  git clone "https://yegor256:${GITHUB_TOKEN}@github.com/yegor256/0dmx"
+fi
+
 ./0dmx/bin/brigade "--secret=${SECRET}"
