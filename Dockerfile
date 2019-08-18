@@ -31,6 +31,7 @@ RUN apt install -y software-properties-common
 RUN apt-add-repository -y ppa:brightbox/ruby-ng
 RUN apt update -y
 RUN apt install -y ruby2.6 ruby2.6-dev
+RUN apt install -y make build-essential
 RUN gem install bundler
 RUN apt install -y git-core
 
