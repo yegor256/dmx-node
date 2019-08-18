@@ -33,6 +33,7 @@ RUN apt update -y
 RUN apt install -y ruby2.6 ruby2.6-dev
 RUN apt install -y make build-essential
 RUN gem install bundler
+RUN gem install nokogiri
 RUN apt install -y git-core
 
 RUN apt install -y firefox libcairo2 libcairo-gobject2 libxt6 libsm6 libice6
