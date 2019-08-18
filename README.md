@@ -18,4 +18,8 @@ $ docker run --name dmx --restart=always \
   yegor256/dmx-node
 ```
 
+GitHub token you have to get [here](https://github.com/settings/tokens).
+
+The secret you have to get in the `config.yml` file injected into 0dmx during deployment.
+
 Here is how you [install](https://docs.docker.com/install/) Docker.

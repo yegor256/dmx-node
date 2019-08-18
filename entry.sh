@@ -8,7 +8,7 @@ if [ -z "${GITHUB_TOKEN}" ]; then
   exit
 fi
 if [ -z "${SECRET}" ]; then
-  echo "You have to specify the -e GITHUB_TOKEN=... argument"
+  echo "You have to specify the -e SECRET=... argument"
   exit
 fi
 
