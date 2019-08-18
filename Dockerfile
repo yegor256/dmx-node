@@ -36,7 +36,8 @@ RUN apt install -y git-core
 
 RUN apt install -y firefox libcairo2 libcairo-gobject2 libxt6 libsm6 libice6
 
-RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz && \
+RUN apt install -y wget && \
+  wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz && \
   tar -xvzf geckodriver* && \
   chmod +x geckodriver && \
   mv "$(pwd)/geckodriver" /usr/local/bin
