@@ -37,7 +37,7 @@ RUN gem install bundler
 RUN gem install nokogiri
 RUN apt install -y git-core
 
-RUN apt install -y firefox libcairo2 libcairo-gobject2 libxt6 libsm6 libice6
+RUN apt install -y firefox=68.0.2 libcairo2 libcairo-gobject2 libxt6 libsm6 libice6
 
 RUN apt install -y wget && \
   wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz && \
