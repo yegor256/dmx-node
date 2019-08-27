@@ -24,12 +24,12 @@ FROM ubuntu:18.04
 MAINTAINER Yegor Bugayenko <yegor256@gmail.com>
 LABEL Description="To run a DMX node (private use only)" Vendor="Yegor Bugayenko" Version="0.1"
 
-ENV DEBIAN_FRONTEND=noninteractive
+ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt update -y
+RUN apt update
 RUN apt install -y software-properties-common
 RUN apt-add-repository -y ppa:brightbox/ruby-ng
-RUN apt update -y
+RUN apt update --fix-missing
 RUN apt upgrade -y
 RUN apt install -y sqlite3
 RUN apt install -y imagemagick
