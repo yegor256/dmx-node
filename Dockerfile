@@ -26,27 +26,27 @@ LABEL Description="To run a DMX node (private use only)" Vendor="Yegor Bugayenko
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt update
-RUN apt install -y software-properties-common
+RUN apt-get update
+RUN apt-get install -y software-properties-common
 RUN apt-add-repository -y ppa:brightbox/ruby-ng
-RUN apt update --fix-missing
-RUN apt upgrade -y
-RUN apt install -y sqlite3
-RUN apt install -y imagemagick
-RUN apt install -y ruby2.6 ruby2.6-dev
-RUN apt install -y zlib1g-dev libssl-dev make build-essential libcurl4-openssl-dev
-RUN gem install bundler
-RUN gem install nokogiri
-RUN apt install -y git-core
+RUN apt-get update --fix-missing
+RUN apt-get upgrade -y
+RUN apt-get install -y sqlite3
+RUN apt-get install -y imagemagick
+RUN apt-get install -y ruby2.6 ruby2.6-dev
+RUN apt-get install -y zlib1g-dev libssl-dev make build-essential libcurl4-openssl-dev
+RUN apt-get install -y git-core
+RUN apt-get install -y firefox=68.0.2 libcairo2 libcairo-gobject2 libxt6 libsm6 libice6
 
-RUN apt install -y firefox=68.0.2 libcairo2 libcairo-gobject2 libxt6 libsm6 libice6
-
-RUN apt install -y wget && \
+RUN apt-get install -y wget && \
   wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz && \
   tar -xvzf geckodriver* && \
   rm geckodriver*.tar.gz && \
   chmod a+x geckodriver && \
   mv "$(pwd)/geckodriver" /usr/local/bin
+
+RUN gem install bundler
+RUN gem install nokogiri
 
 COPY entry.sh /
 RUN chmod a+x /entry.sh
