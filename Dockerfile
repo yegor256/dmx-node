@@ -27,6 +27,7 @@ LABEL Description="To run a DMX node (private use only)" Vendor="Yegor Bugayenko
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update
+RUN apt-get install -y apt-utils
 RUN apt-get install -y software-properties-common
 RUN apt-add-repository -y ppa:brightbox/ruby-ng
 RUN apt-get update --fix-missing
@@ -36,7 +37,7 @@ RUN apt-get install -y imagemagick
 RUN apt-get install -y ruby2.6 ruby2.6-dev
 RUN apt-get install -y zlib1g-dev libssl-dev make build-essential libcurl4-openssl-dev
 RUN apt-get install -y git-core
-RUN apt-get install -y firefox=68.0.2 libcairo2 libcairo-gobject2 libxt6 libsm6 libice6
+RUN apt-get install -y firefox libcairo2 libcairo-gobject2 libxt6 libsm6 libice6
 
 RUN apt-get install -y wget && \
   wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz && \
