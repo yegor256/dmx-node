@@ -31,6 +31,7 @@ RUN apt install -y software-properties-common
 RUN apt-add-repository -y ppa:brightbox/ruby-ng
 RUN apt update -y
 RUN apt install -y sqlite3
+RUN apt install -y imagemagick
 RUN apt install -y ruby2.6 ruby2.6-dev
 RUN apt install -y zlib1g-dev libssl-dev make build-essential libcurl4-openssl-dev
 RUN gem install bundler
