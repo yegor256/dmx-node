@@ -20,3 +20,4 @@ The GitHub token you have to get [here](https://github.com/settings/tokens).
 The Secret you have to get in the `config.yml` file injected into 0dmx during deployment.
 
 Here is how you [install](https://docs.docker.com/install/) Docker.
+This [manual](https://linuxconfig.org/how-to-install-docker-on-ubuntu-18-04-bionic-beaver) is the simplest.
