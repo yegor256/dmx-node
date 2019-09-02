@@ -14,6 +14,8 @@ fi
 
 if [ -d 0dmx ]; then
   cd 0dmx
+  git clean -fd
+  git reset --hard
   git pull
 else
   git clone "https://yegor256:${GITHUB_TOKEN}@github.com/yegor256/0dmx"
