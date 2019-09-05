@@ -5,11 +5,11 @@ set -e
 
 if [ -z "${GITHUB_TOKEN}" ]; then
   echo "You have to specify the -e GITHUB_TOKEN=... argument"
-  exit -1
+  exit 1
 fi
 if [ -z "${SECRET}" ]; then
   echo "You have to specify the -e SECRET=... argument"
-  exit -1
+  exit 2
 fi
 
 if [ -d 0dmx ]; then
