@@ -49,7 +49,7 @@ RUN apt-get install -y wget && \
 RUN gem install bundler
 RUN gem install nokogiri
 
-COPY entry.sh /
-RUN chmod a+x /entry.sh
+COPY dmx-node-entry.sh /
+RUN chmod a+x /dmx-node-entry.sh
 
-ENTRYPOINT ["/entry.sh"]
+ENTRYPOINT ["/dmx-node-entry.sh"]
