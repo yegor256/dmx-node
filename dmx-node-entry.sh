@@ -24,4 +24,4 @@ fi
 
 bundle update --no-color
 
-bundle exec ruby bin/brigade "--secret=${SECRET}"
+bundle exec ruby bin/brigade "--secret=${SECRET}" "${ARGS}"
