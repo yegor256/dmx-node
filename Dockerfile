@@ -33,6 +33,7 @@ RUN apt-add-repository -y ppa:brightbox/ruby-ng
 RUN apt-get update --fix-missing
 RUN apt-get upgrade -y
 RUN apt-get install -y sqlite3
+RUN apt-get install -y wget
 RUN apt-get install -y nodejs
 RUN apt-get install -y lsof
 RUN apt-get install -y vim
@@ -64,7 +65,6 @@ RUN apt-get install -y wget && \
   mv "$(pwd)/geckodriver" /usr/local/bin
 
 RUN gem install bundler
-RUN gem install nokogiri
 
 COPY dmx-node-entry.sh /
 RUN chmod a+x /dmx-node-entry.sh
