@@ -35,6 +35,7 @@ RUN apt-get upgrade -y
 RUN apt-get install -y sqlite3
 RUN apt-get install -y nodejs
 RUN apt-get install -y lsof
+RUN apt-get install -y vim
 RUN apt-get install -y imagemagick
 RUN apt-get install -y ruby2.6 ruby2.6-dev
 RUN apt-get install -y zlib1g-dev libssl-dev make build-essential libcurl4-openssl-dev
