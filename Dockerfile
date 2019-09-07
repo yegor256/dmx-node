@@ -50,7 +50,7 @@ RUN wget http://ftp.mozilla.org/pub/firefox/releases/68.0.2/linux-$(uname -m)/en
   ln -s /opt/firefox/firefox /usr/bin/firefox && \
   apt-mark hold firefox
 
-RUN apt-get install -y libcairo2 libcairo-gobject2 libxt6 libsm6 libice6
+RUN apt-get install -y libcairo2 libcairo-gobject2 libxt6 libsm6 libice6 libgtk-3-0
 
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4 && \
   echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse" | tee /etc/apt/sources.list.d/mongodb.list && \
