@@ -36,6 +36,7 @@ RUN apt-get install -y sqlite3
 RUN apt-get install -y imagemagick
 RUN apt-get install -y ruby2.6 ruby2.6-dev
 RUN apt-get install -y zlib1g-dev libssl-dev make build-essential libcurl4-openssl-dev
+RUN apt-get install -y iputils-ping
 RUN apt-get install -y git-core
 RUN apt-get install -y firefox libcairo2 libcairo-gobject2 libxt6 libsm6 libice6
 

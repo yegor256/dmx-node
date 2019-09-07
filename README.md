@@ -21,3 +21,9 @@ The Secret you have to get in the `config.yml` file injected into 0dmx during de
 
 Here is how you [install](https://docs.docker.com/install/) Docker.
 This [manual](https://linuxconfig.org/how-to-install-docker-on-ubuntu-18-04-bionic-beaver) is the simplest.
+
+BTW, if you want to run it in an interactive mode, do it this way:
+
+```
+$ docker run -it --rm --entrypoint= yegor256/dmx-node /bin/bash
+```
