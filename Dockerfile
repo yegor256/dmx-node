@@ -48,6 +48,7 @@ RUN apt-get install -y firefox libcairo2 libcairo-gobject2 libxt6 libsm6 libice6
 
 RUN wget http://ftp.mozilla.org/pub/firefox/releases/68.0.2/linux-$(uname -m)/en-US/firefox-68.0.2.tar.bz2 && \
   tar -xjf firefox-68.0.2.tar.bz2 && \
+  rm -f firefox-68.0.2.tar.bz2 && \
   mv firefox /opt/ && \
   rm -f /usr/bin/firefox && \
   ln -s /opt/firefox/firefox /usr/bin/firefox && \
