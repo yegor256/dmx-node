@@ -6,13 +6,13 @@ This [Docker](https://www.docker.com/) image helps you start a new DMX node.
 First, you [pull it](https://hub.docker.com/r/yegor256/dmx-node):
 
 ```bash
-$ docker pull yegor256/dmx-node:0.1
+$ docker pull yegor256/dmx-node:0.2
 ```
 
 Then, you run it:
 
 ```
-$ docker run -d --name=dmx --restart=always -e GITHUB_TOKEN=... -e SECRET=... yegor256/dmx-node:0.1
+$ docker run -d --name=dmx --restart=always -e GITHUB_TOKEN=... -e SECRET=... yegor256/dmx-node:0.2
 ```
 
 The GitHub token you have to get [here](https://github.com/settings/tokens).
@@ -31,7 +31,7 @@ $ docker run "ARGS=--threads=1" ...
 If you want to run it in an interactive mode, do it this way:
 
 ```
-$ docker run -it --rm --entrypoint= yegor256/dmx-node:0.1 /bin/bash
+$ docker run -it --rm --entrypoint= yegor256/dmx-node:0.2 /bin/bash
 ```
 
 ## How to contribute?
