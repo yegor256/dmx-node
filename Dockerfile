@@ -34,6 +34,7 @@ RUN apt-get update --fix-missing
 RUN apt-get upgrade -y
 RUN apt-get install -y sqlite3
 RUN apt-get install -y wget
+RUN apt-get install -y curl
 RUN apt-get install -y nodejs
 RUN apt-get install -y lsof
 RUN apt-get install -y vim
