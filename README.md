@@ -18,7 +18,7 @@ $ docker pull yegor256/dmx-node:0.3
 Then, you run it:
 
 ```
-$ docker run -d --name=dmx --restart=always -e GITHUB_TOKEN=... -e SECRET=... yegor256/dmx-node
+$ docker run -d --name=dmx --restart=always -e GITHUB_TOKEN=... -e ARGS=... yegor256/dmx-node
 ```
 
 The GitHub token you have to get [here](https://github.com/settings/tokens).
