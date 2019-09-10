@@ -68,6 +68,8 @@ RUN apt-get install -y wget && \
   chmod a+x geckodriver && \
   mv "$(pwd)/geckodriver" /usr/local/bin
 
+RUN apt-get install -y sendmail
+
 RUN apt-get clean
 
 RUN gem install bundler
