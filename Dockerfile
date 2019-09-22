@@ -49,9 +49,10 @@ RUN apt-get install -y sudo
 
 RUN apt-get install -y firefox libcairo2 libcairo-gobject2 libxt6 libsm6 libice6 libgtk-3-0
 
-RUN wget http://ftp.mozilla.org/pub/firefox/releases/68.0.2/linux-$(uname -m)/en-US/firefox-68.0.2.tar.bz2 && \
-  tar -xjf firefox-68.0.2.tar.bz2 && \
-  rm -f firefox-68.0.2.tar.bz2 && \
+RUN FF_VERSION=68.0.2 && \
+  wget http://ftp.mozilla.org/pub/firefox/releases/${FF_VERSION}/linux-$(uname -m)/en-US/firefox-${FF_VERSION}.tar.bz2 && \
+  tar -xjf firefox-${FF_VERSION}.tar.bz2 && \
+  rm -f firefox-${FF_VERSION}.tar.bz2 && \
   mv firefox /opt/ && \
   rm -f /usr/bin/firefox && \
   ln -s /opt/firefox/firefox /usr/bin/firefox && \
@@ -62,8 +63,8 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75
   apt-get update && \
   apt-get install -y mongodb-org
 
-RUN apt-get install -y wget && \
-  wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz && \
+RUN GECKO_VERSION=0.25.0 && \
+  wget https://github.com/mozilla/geckodriver/releases/download/v${GECKO_VERSION}/geckodriver-v${GECKO_VERSION}-linux64.tar.gz && \
   tar -xvzf geckodriver* && \
   rm geckodriver*.tar.gz && \
   chmod a+x geckodriver && \
