@@ -12,13 +12,13 @@ $ docker pull yegor256/dmx-node
 It is recommended to use a specific version, though, like this one:
 
 ```bash
-$ docker pull yegor256/dmx-node:0.3
+$ docker pull yegor256/dmx-node:0.5
 ```
 
 Then, you run it:
 
 ```
-$ docker run -d --name=dmx --restart=always -e GITHUB_TOKEN=... -e ARGS=... yegor256/dmx-node
+$ docker run -d --name=dmx --restart=always -e GITHUB_TOKEN=... -e ARGS=... yegor256/dmx-node:0.5
 ```
 
 The GitHub token you have to get [here](https://github.com/settings/tokens).
@@ -37,7 +37,7 @@ $ docker run "ARGS=--threads=1" ...
 If you want to run it in an interactive mode, do it this way:
 
 ```
-$ docker run -it --rm --entrypoint= yegor256/dmx-node /bin/bash
+$ docker run -it --rm --entrypoint= yegor256/dmx-node:0.5 /bin/bash
 ```
 
 ## How to contribute?
@@ -59,14 +59,14 @@ image in its latest version and `0.1` with the actual tag name):
 
 ```
 $ docker images
-$ docker tag 2f1e65b6980e yegor256/dmx-node:0.1
+$ docker tag 2f1e65b6980e yegor256/dmx-node:0.5
 ```
 
 And then, push the tag to the repo:
 
 ```
 $ docker login
-$ docker push yegor256/dmx-node:0.1
+$ docker push yegor256/dmx-node:0.5
 ```
 
 Would be great to automate this via Rultor, BTW...
