@@ -56,18 +56,21 @@ Everything that is merged into `master` is picked up by
 [Docker Hub](https://hub.docker.com/r/yegor256/dmx-node) automatically. Once
 you see a new green build there, you may want to create a new tag, to
 stabilize the version (replace the `2f1e65b6980e` with the ID of the
-image in its latest version and `0.1` with the actual tag name):
+image in its latest version and `0.0` with the actual tag name):
 
 ```
+$ docker pull yegor256/dmx-node
 $ docker images
-$ docker tag 2f1e65b6980e yegor256/dmx-node:0.5
+$ docker tag 2f1e65b6980e yegor256/dmx-node:0.0
 ```
 
 And then, push the tag to the repo:
 
 ```
 $ docker login
-$ docker push yegor256/dmx-node:0.5
+$ docker push yegor256/dmx-node:0.0
+$ git tag 0.0 -m 'new release'
+$ git push origin 0.0
 ```
 
 Would be great to automate this via Rultor, BTW...
