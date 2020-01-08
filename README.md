@@ -13,13 +13,13 @@ $ docker pull yegor256/dmx-node
 It is recommended to use a specific version, though, like this one:
 
 ```bash
-$ docker pull yegor256/dmx-node:0.5
+$ docker pull yegor256/dmx-node:0.6
 ```
 
 Then, you run it:
 
 ```
-$ docker run -d --name=dmx --restart=always -e GITHUB_TOKEN=... -e ARGS=... yegor256/dmx-node:0.5
+$ docker run -d --name=dmx --restart=always -e GITHUB_TOKEN=... -e ARGS=... yegor256/dmx-node:0.6
 ```
 
 The GitHub token you have to get [here](https://github.com/settings/tokens).
@@ -38,7 +38,7 @@ $ docker run "ARGS=--threads=1" ...
 If you want to run it in an interactive mode, do it this way:
 
 ```
-$ docker run -it --rm --entrypoint= yegor256/dmx-node:0.5 /bin/bash
+$ docker run -it --rm --entrypoint= yegor256/dmx-node:0.6 /bin/bash
 ```
 
 ## How to contribute?
