@@ -1,3 +1,4 @@
+[![Build Status](https://img.shields.io/travis/yegor256/dmx-node/master.svg)](https://travis-ci.org/yegor256/dmx-node)
 [![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/yegor256/dmx-node)](https://hub.docker.com/r/yegor256/dmx-node)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/yegor256/dmx-node/master/LICENSE.txt)
 
