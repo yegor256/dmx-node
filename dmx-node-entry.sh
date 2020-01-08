@@ -34,7 +34,7 @@ if [ -z "${SECRET}" ]; then
   exit 2
 fi
 
-# Start Sendmail service in order to haven an ability to
+# Start Sendmail service in order to have an ability to
 # send email from the running container.
 /etc/init.d/sendmail start
 
@@ -42,11 +42,13 @@ if [ -d 0dmx ]; then
   cd 0dmx
   git clean -fd
   git reset --hard
-  git pull
 else
   git clone "https://yegor256:${GITHUB_TOKEN}@github.com/yegor256/0dmx"
   cd 0dmx
 fi
+git pull --tags
+tag=$(git describe --tags $(git rev-list --tags --max-count=1))
+git checkout "${tag}"
 
 bundle update --no-color
 
