@@ -46,6 +46,7 @@ else
   git clone "https://yegor256:${GITHUB_TOKEN}@github.com/yegor256/0dmx"
   cd 0dmx
 fi
+git checkout master
 git pull --tags
 tag=$(git describe --tags $(git rev-list --tags --max-count=1))
 git checkout "${tag}"
