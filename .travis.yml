@@ -1,7 +1,0 @@
-language: python
-services:
-  - docker
-install:
-  - docker build -t test .
-script:
-  - docker run --rm --entrypoint= test echo 'Hello'
